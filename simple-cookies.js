@@ -1,6 +1,6 @@
 function setCookie(cookieName, cookieValue, expireDays,isGlobal) {
     var expireDate = new Date();
-    expireDate.setTime(d.getTime() + (expireDays*24*60*60*1000));
+    expireDate.setTime(expireDate.getTime() + (expireDays*24*60*60*1000));
     var expires = "expires="+expireDate.toUTCString();
 	if(isGlobal){
 		document.cookie = cookieName + "=" + cookieValue + "; " + expires+"; path=/";
